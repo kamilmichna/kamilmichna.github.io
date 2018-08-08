@@ -106,11 +106,14 @@ section {
   font-family: "Abhaya Libre", serif; }
 
 .about-me__content {
+  padding: 20px;
   width: 40%;
   font-size: 3em;
   font-family: "Fira Sans", sans-serif;
-  text-align: left;
-  color: #272727; }
+  text-align: justify;
+  color: #272727;
+  border-bottom: 5px solid #6709f5;
+  border-left: 5px solid #6709f5; }
 
 .skills {
   position: relative; }
