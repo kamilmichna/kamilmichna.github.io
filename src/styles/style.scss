@@ -1,0 +1,116 @@
+@import './reset.scss';
+@import './mixins.scss';
+$headers:   'Abhaya Libre', serif;
+$content:  'Fira Sans', sans-serif;
+$text-color-second: #272727;
+$text-color-alt: #6709f5;
+.site-container {
+    @include flex();
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    max-width: 100%;
+    font-size: 10px;
+}
+
+.header {
+    @include flex();
+    justify-content: space-between;
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    @include shadow();
+}
+
+.logotype {
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    box-sizing: border-box;
+    height: 100%;
+    width: 30%;
+    &__text {
+        font-family: $headers;
+        font-weight: 100;
+        color: rgb(0, 0, 0);
+        font-size: 4em;
+        margin-left: 5%;
+    }
+    &__img {
+        height: 70%;
+    }
+}
+.navigation{
+    @include flex();
+    justify-content: space-around;
+    width: 40%;
+    height: 100%;
+    &__item{
+        color: $text-color-second;
+        text-decoration: none;
+        font-family: $content;
+        font-size: 2em;
+        transition-duration: 0.5s; 
+        &:hover{
+            color:$text-color-alt;
+        }
+    }
+}
+section{
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    @include flex();
+    max-width: 100%;
+    z-index: -999999;
+}
+.about-me{
+    &__heading{
+        font-size: 6.5em;
+        margin-bottom: 3%;
+        font-family: $headers;
+    }
+
+    &__content{
+
+        width: 40%;
+        font-size: 3em;
+        font-family: $content;
+        text-align: left;
+        color: $text-color-second;
+    }
+}   
+
+.skills{
+    position: relative;
+    &__heading{
+        font-size: 6.5em;
+        font-family: $headers;
+        margin-bottom: 5%;
+    }
+    &__grid-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        width: 70%;
+        height: 60%;
+        grid-gap:5%;
+    }
+    &__skill-tile{
+        background-color: $text-color-alt;
+        @include shadow();
+        @include flex();
+        color: #ffffff;
+       
+        i{
+          
+            font-size: 15em;
+            
+           
+        }
+    }
+  
+}
