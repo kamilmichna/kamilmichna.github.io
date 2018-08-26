@@ -123,7 +123,7 @@ section {
     margin-bottom: 5%; }
   .skills__grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     width: 70%;
     height: 60%;
