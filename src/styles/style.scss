@@ -17,7 +17,7 @@ $text-color-alt: #6709f5;
 .header {
     @include flex();
     justify-content: space-between;
-    width: 100vw;
+    width: 100%;
     height: 10vh;
     position: fixed;
     top: 0px;
@@ -48,7 +48,7 @@ $text-color-alt: #6709f5;
 .navigation{
     @include flex();
     justify-content: space-around;
-    width: 40%;
+    width: 60%;
     height: 100%;
     &__item{
         color: $text-color-second;
@@ -111,7 +111,7 @@ section{
        
         i{
           
-            font-size: 15em;
+            font-size: 10em;
             
            
         }
@@ -133,5 +133,34 @@ section{
         color: $text-color-second;
         border-bottom: 5px solid $text-color-alt;
         border-left: 5px solid $text-color-alt;
+    }
+}
+.contact{
+
+    &__heading{
+        font-size: 6.5em;
+        font-family: $headers;
+        margin-bottom: 5%;
+
+    }
+    &_container{
+        @include flex();
+        flex-direction: column;
+        &__item{
+            margin-bottom: 2vh;
+            font-size: 3em;
+        }
+    }
+}
+@media (max-width: 500px){
+    .site-container{
+        font-size: 5px;
+    }
+    .logotype__text{
+        font-size: 3em
+    }
+    .navigation__item{
+        color:red;
+        font-size: 2em
     }
 }
