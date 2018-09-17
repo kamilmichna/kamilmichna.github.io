@@ -85,6 +85,7 @@ section{
         color: $text-color-second;
         border-bottom: 5px solid $text-color-alt;
         border-left: 5px solid $text-color-alt;
+        line-height: 120%;
     }
 }   
 
@@ -133,6 +134,7 @@ section{
         color: $text-color-second;
         border-bottom: 5px solid $text-color-alt;
         border-left: 5px solid $text-color-alt;
+        line-height: 120%;
     }
 }
 .contact{
@@ -149,6 +151,9 @@ section{
         &__item{
             margin-bottom: 2vh;
             font-size: 3em;
+            a{
+                text-decoration: none;
+            }
         }
     }
 }

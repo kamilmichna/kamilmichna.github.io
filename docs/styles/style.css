@@ -113,7 +113,8 @@ section {
   text-align: justify;
   color: #272727;
   border-bottom: 5px solid #6709f5;
-  border-left: 5px solid #6709f5; }
+  border-left: 5px solid #6709f5;
+  line-height: 120%; }
 
 .skills {
   position: relative; }
@@ -151,7 +152,8 @@ section {
   text-align: justify;
   color: #272727;
   border-bottom: 5px solid #6709f5;
-  border-left: 5px solid #6709f5; }
+  border-left: 5px solid #6709f5;
+  line-height: 120%; }
 
 .contact__heading {
   font-size: 6.5em;
@@ -166,6 +168,8 @@ section {
   .contact_container__item {
     margin-bottom: 2vh;
     font-size: 3em; }
+    .contact_container__item a {
+      text-decoration: none; }
 
 @media (max-width: 500px) {
   .site-container {
