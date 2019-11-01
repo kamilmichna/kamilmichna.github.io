@@ -14,10 +14,12 @@
     "gatsby-plugin-sharp": "^2.2.31",
     "gatsby-source-filesystem": "^2.1.33",
     "gatsby-transformer-sharp": "^2.2.23",
+    "i18next": "^19.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-helmet": "^5.2.1",
+    "react-i18next": "^11.0.1",
     "styled-components": "^4.4.0"
   },
   "devDependencies": {

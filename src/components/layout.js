@@ -5,12 +5,13 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, {useState, useEffect} from "react"
 import PropTypes from "prop-types"
 import styled from 'styled-components';
 import GlobalStyle from './GlobalStyle'
-import Header from "./header"
+import i18n from '../i18n';
 
+import Header from './Header';
 const LayoutContainer = styled.div`
 
   font-size: 10px;
@@ -29,8 +30,10 @@ const Layout = ({ children }) => {
   return (
       <LayoutContainer>
       <GlobalStyle/>
-      <Header/>
-      <main>{children}</main>
+      <p>{i18n.t('hero.first3')}</p>
+
+      {children}
+      
       </LayoutContainer>
 
   )
