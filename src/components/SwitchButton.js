@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 const Container = styled.div`
     width:80px;
-    background-color: #0CC2FC;
+    background: linear-gradient(89.03deg, #0CC2FC -9.44%, #1A06FF 227.01%);
     height: 40px;
     position: relative;
     border-radius: 1000px;
