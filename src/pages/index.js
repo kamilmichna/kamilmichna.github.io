@@ -18,7 +18,7 @@ const PageSection = styled.section`
       grid-column: 1/13;
     min-height: 10vh;
     &.section--hero{
-      
+      z-index: 999;
       grid-row: 3/16;
       & p {
         color: rgba(0,0,0,0.87);
@@ -33,7 +33,7 @@ const PageSection = styled.section`
       
       & .hero--subdescription{
         grid-column: 7/11;
-          grid-row: 7;
+          grid-row: 7/9;
       }
       & .hero--description{
 
@@ -79,7 +79,7 @@ const IndexPage = () => {
     <SVGBalls/>
     <PageSection id='hero' className='section--hero'>
       <p className='hero--description'>{i18n.t('hero.first1')} <span>{i18n.t('hero.first2')}</span> {i18n.t('hero.first3')}</p>
-      <p className='hero--subdescription'>I`m 18 years old web developer from Krosno. I became interested in coding when i turn 16 and it still stays my biggest hobby. Follow the dashed line to <span>see more!</span></p>
+      <p className='hero--subdescription'>{i18n.t('hero.second')}</p>
     </PageSection>
 
   </Layout>

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import React, { useEffect } from "react"
 import Button from './Button';
 import HeaderNav from './HeaderNav';
+import SwitchButton from './SwitchButton';
 import i18n from '../i18n'
 const HeaderContainer = styled.header`
 display: grid;
@@ -33,18 +34,7 @@ const Title = styled.h1`
   grid-column: 1/3;
 
 `
-const ChangeLanguageButton = styled.span`
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: 2em;
-  width: 10%;
 
-  height: 100%;
-  & p{
-    margin: 10px;
-  }
-`
 const Header = (props) => {
   const onChangeLanguageClick = (lng) =>{
     console.log('asd')
@@ -66,10 +56,7 @@ const Header = (props) => {
   <HeaderContainer id='header'>
     <Title>Kamil Michna</Title>
     <HeaderNav/>
-    <ChangeLanguageButton>
-      <p onClick={()=> onChangeLanguageClick('en')}>{i18n.t('languageButtons.pl')}</p>
-      <p onClick={()=> onChangeLanguageClick('pl')}>{i18n.t('languageButtons.en')}</p>
-    </ChangeLanguageButton>
+    <SwitchButton onSwitchChange={onChangeLanguageClick}/>
   </HeaderContainer>
 )
 }
