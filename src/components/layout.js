@@ -9,7 +9,7 @@ import React, {useState, useEffect} from "react"
 import PropTypes from "prop-types"
 import styled from 'styled-components';
 import GlobalStyle from './GlobalStyle'
-import i18n from '../i18n';
+import i18n from '../configs/i18n';
 
 import Header from './Header';
 const LayoutContainer = styled.div`

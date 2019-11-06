@@ -3,7 +3,7 @@ import React, { useEffect } from "react"
 import Button from './Button';
 import HeaderNav from './HeaderNav';
 import SwitchButton from './SwitchButton';
-import i18n from '../i18n'
+import i18n from '../configs/i18n'
 const HeaderContainer = styled.header`
 display: grid;
 grid-template-columns: repeat(12,1fr);

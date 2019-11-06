@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from './Button';
-import i18n from '../i18n'
+import i18n from '../configs/i18n'
 const Nav = styled.nav`
 display: grid;
 grid-template-columns: repeat(3,1fr);

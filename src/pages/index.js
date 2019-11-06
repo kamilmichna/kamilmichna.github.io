@@ -7,10 +7,13 @@ import Header from "../components/Header";
 import '@csstools/normalize.css';
 import SVGBalls from '../components/SVGBalls';
 import styled from 'styled-components';
-import i18n from '../i18n';
+import i18n from '../configs/i18n';
 import { useTranslation } from 'react-i18next';
 import { initReactI18next } from 'react-i18next';
 import TechnologyCard from '../components/TechnologyCard';
+import NewestPostCardContainer from '../components/NewestPostCard';
+import ProjectCard from '../components/ProjectCard';
+import projectsConfig from '../configs/projectsConfig';
 const PageSection = styled.section`
     display: grid;
     grid-template-columns: repeat(12,1fr);
@@ -53,7 +56,89 @@ const PageSection = styled.section`
          
         }
       }
+      &.section--posts{
+        grid-row: 33/ span 13;
+        & .heading{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          grid-column: 3/11;
+          grid-row: 2/4;
+          background: linear-gradient(180deg, #0CB7FC 0%, #1A06FF 99.99%, rgba(12, 194, 252, 0) 100%);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+          border-radius: 20px 0px;
+          & p{ 
+            font-size: 2.25em;
+            color: white;
+          }
+          
+        }
+      
+        & .post_card_container{
+          grid-column: 1/13;
+          grid-row: 5/15;
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+          grid-gap: 10%;
+          padding-left: 10%;
+          padding-right: 10%;
+        }
+      }
+      &.section--projects{
+        grid-row: 46/ span 16;
+        & > p {
+          grid-column: 1/13;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 3em;
+          font-weight: 600;
+        }
+        & .project_card_container{
+          display: flex;
+          justify-content: space-around;
+          align-items:center;
+          grid-column: 1/13;
+          grid-row: 3/17;
+          background: linear-gradient(90deg, #0CC2FC -33.42%, #0B00F7 178.31%, #1A06FF 188.7%, rgba(196, 196, 196, 0) 188.72%);
+       
+        }
+      }
+      &.section--resumee{
+        grid-row: 62/ span 16;
+        & p{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: rgba(0, 0, 0, 0.87);
+          grid-column: 2/12;
+          font-size: 3em;
+          font-weight: 600;
+        }
+        & a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        & .img_wrapper{
+          grid-column: 1/13;
+          grid-row: 3/21;
+          display: flex;
+          justify-content:center;
 
+          & img{
+         height: 100%;
+         width: auto;
+         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+         transition-duration: 0.5s;
+         &:hover{
+           cursor: pointer;
+           transform: scale(1.02);
+         }
+        }
+        }
+      }
+   
 `
 const TechnologiesContainer = styled.ul`
     grid-column: 2/8;
@@ -67,6 +152,9 @@ const TechnologiesContainer = styled.ul`
 
 const IndexPage = () => {
   const [lng,setLng] = useState();
+  const projectCards = projectsConfig.map(el=>(
+    <ProjectCard thisSite={el.thisSite} to={el.to} text={el.text} title={el.title}></ProjectCard>
+  ))
   useEffect(()=>{
     
     i18n
@@ -152,7 +240,29 @@ const IndexPage = () => {
           </TechnologyCard>
         </TechnologiesContainer>
     </PageSection>
+    <PageSection className='section--posts'>
+        <div className='heading'>
+            <p>{i18n.t('newestposts.heading')}</p>
+        </div>
+        <div className='post_card_container'>
+          <NewestPostCardContainer title='Matura 2019 - Ulubione cyfry'></NewestPostCardContainer>
+          <NewestPostCardContainer title='Biblioteka Webu #4 - Angular'></NewestPostCardContainer>
+        </div>
+    </PageSection>
+    <PageSection className='section--resumee'>
+      <p>{i18n.t('resume.heading')}</p>
+      <div className='img_wrapper'>
+        <a href='/ads' target='__blank'>
+          <img src='https://resumegenius.com/wp-content/uploads/2015/11/Artist-Resume-Example-Template.png'/>
+        </a>
+      </div>
 
+    </PageSection>
+    <PageSection className='section--projects'>
+      <p>{i18n.t('projects.text')}</p>
+      <div className='project_card_container'>{projectCards}</div>
+
+    </PageSection>
   </Layout>
 )
 }
