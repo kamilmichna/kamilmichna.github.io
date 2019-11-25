@@ -22,6 +22,7 @@ const LayoutContainer = styled.div`
   grid-template-columns: repeat(12,1fr);
   grid-gap: 20px;
   grid-auto-rows: 5vh;
+  height: 200vh;
  
 `
 const Layout = ({ children }) => {

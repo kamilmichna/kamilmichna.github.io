@@ -7,7 +7,7 @@ const config = [
     },
     {
         title: "Pogodynka",
-        text: "asdads asdasd ",
+        text: " Aplikacja pozwalająca na sprawdzenie pogody w swojej okolicy, napisana w React z TypeScript oraz styled components oraz Open Weather API. ",
         to: "https://kamilmichna.github.io/pogodynka/",
 
     },

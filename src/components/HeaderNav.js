@@ -21,7 +21,7 @@ box-sizing: border-box;
         <Nav>
             <Button to='/'>{i18n.t('navButtons.first')}</Button>
             <Button isBlank to='https://github.com/kamilmichna'>{i18n.t('navButtons.second')}</Button>
-            <Button isBlank to="#hero">{i18n.t('navButtons.third')}</Button>
+            <Button  to="#section--contact">{i18n.t('navButtons.third')}</Button>
         </Nav>
     )
  }
