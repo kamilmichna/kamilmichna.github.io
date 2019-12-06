@@ -12,7 +12,9 @@ box-sizing: border-box;
     height: 100%;
     position: absolute;
     right: 20px;
-
+@media screen and (max-width: 600px) {
+    display: none;
+}
 `
 
  const HeaderNav = () => {

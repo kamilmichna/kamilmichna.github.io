@@ -12,9 +12,16 @@ animation: 5s ${moveLineDash} linear infinite;
    top: 50vh;
    height: auto;
    position: absolute;
+
     .path{
         stroke-dasharray: 20;
+      
     }
+    @media screen and (max-width: 600px) {
+        width: 80vw;
+   
+    }
+    
 
 `
 

@@ -16,9 +16,18 @@ z-index: 99999;
 background-color: white;
 transition: box-shadow 0.5s;
 align-items: center;
-&.header--scrolled{
+@media screen and (max-width: 600px) {
+  grid-template-columns: repeat(3,1fr) !important;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.1);
-  position: fixed;
+  height: 15vh;
+  }
+&.header--scrolled{
+  @media screen and (min-width: 600px) {
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.1);
+  }
+
+
 }
 
 `
@@ -32,6 +41,11 @@ const Title = styled.h1`
   justify-content: center;
   align-items: center;
   grid-column: 1/3;
+  @media screen and (max-width: 600px) {
+    font-size: 5em !important;
+    grid-column: 2 !important;
+    text-align: center;
+    }
 
 `
 

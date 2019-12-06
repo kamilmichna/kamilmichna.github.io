@@ -3,11 +3,18 @@ import styled from 'styled-components';
 
 const TechnologyCardContainer = styled.li`
     position: relative;
+
+
     background-color: #E5E5E5;
     width: 100%;
     height: 100%;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     border-radius: 10px;
+    @media screen and (max-width: 600px) {
+        width: 80%;
+      height: 80%;
+      box-sizing: border-box;
+    }
 
 `
 const SVGContainer = styled.div`

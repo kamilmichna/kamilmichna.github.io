@@ -22,6 +22,7 @@ const PageSection = styled.section`
       grid-column: 1/ span 13;
     min-height: 10vh;
     z-index: 999;
+
     &.section--contact{
       grid-row: 78 / span 5;
       & p{
@@ -46,6 +47,9 @@ const PageSection = styled.section`
         background: linear-gradient(89.85deg, #1A06FF -18.12%, #0CC2FC 103.29%);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         padding: 40px;
+        @media screen and (max-width: 600px) {
+          display: none;
+        }
         & a{
           display: flex;
           justify-content: center;
@@ -169,7 +173,12 @@ const PageSection = styled.section`
       
       & .hero__subdescription{
         grid-column: 7/11;
-          grid-row: 7/9;
+        grid-row: 7/9;
+        @media screen and (max-width: 600px) {
+          grid-row: 3/5;
+          grid-column: 8/11;
+        }
+          
       }
       & .hero__description{
 
@@ -181,14 +190,27 @@ const PageSection = styled.section`
       }
       &.section--technologies{
         grid-row: 16/ span 17;
+        @media screen and (max-width: 600px) {
+          grid-row: 15/ span 17;
+        }
         & .technologies__heading{
+          display: flex;
+          justify-content: center;
+          align-items:center;
+
           grid-column: 2/6;
           font-size: 3.6em;
           font-weight: 600;
           color: rgba(0, 0, 0, 0.87);
+          @media screen and (max-width: 600px) {
+            grid-column: 1/13;
+            grid-row: 1;
+          }
          
         }
+        
       }
+   
       &.section--posts{
         grid-row: 33/ span 13;
         & .heading{
@@ -258,6 +280,9 @@ const PageSection = styled.section`
           grid-row: 3/21;
           display: flex;
           justify-content:center;
+          @media screen and (max-width: 600px) {
+            grid-row: 3/15;
+          }
 
           & img{
          height: 100%;
@@ -280,6 +305,11 @@ const TechnologiesContainer = styled.ul`
     grid-template-columns: repeat(3,1fr);
     grid-gap: 30px;
     grid-template-rows: repeat(3,1fr);
+    @media screen and (max-width: 600px) {
+      grid-column: 2/12;
+      grid-row: 3/16;
+      grid-gap: 0px;
+    }
 `
 
 

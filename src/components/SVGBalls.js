@@ -28,6 +28,15 @@ const Wrapper = styled.span`
     left: 0px;
     height: 20vw;
     width: 20vw;
+    @media screen and (max-width: 600px) {
+    
+  /* grid-template-columns: repeat(3,1fr) !important; */
+  height: 60vw;
+    width: 60vw;
+    left: 10px;
+    top: 40vh;
+  }
+    
 `
 const Container = styled.div`
 margin: 10vw;
@@ -38,6 +47,7 @@ z-index: 3;
 grid-row: 1/3;
   grid-column: 1/13;
 
+
 `
 const Bigger = styled.svg`
     position: absolute;
@@ -45,6 +55,7 @@ const Bigger = styled.svg`
     left:0px;
     width: 100%;
     height: 100%;
+    
     z-index: 1;
 `
 const Smaller = styled.svg`
@@ -55,6 +66,12 @@ animation: 10s ${moveBall} linear infinite;
     left: -50%;
     bottom: 0%;
     z-index: 2;
+    @media screen and (max-width: 600px) {
+  /* grid-template-columns: repeat(3,1fr) !important; */
+  width: 70%;
+    height: 70%;
+    
+  }
 `
  const SVGBalls = ()=>{
 

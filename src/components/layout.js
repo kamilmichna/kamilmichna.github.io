@@ -23,6 +23,16 @@ const LayoutContainer = styled.div`
   grid-gap: 20px;
   grid-auto-rows: 5vh;
   height: 200vh;
+  @media screen and (max-width: 600px) {
+      *{
+        grid-template-columns: 1fr;
+        font-size: 5px;
+        
+      }
+      overflow-x: hidden;
+
+      
+    }
  
 `
 const Layout = ({ children }) => {
