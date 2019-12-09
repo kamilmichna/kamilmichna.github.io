@@ -46,7 +46,10 @@ height: 100%;
 z-index: 3;
 grid-row: 1/3;
   grid-column: 1/13;
-
+  @media screen and (max-width: 500px) {
+       /* DISABLED ON MOBILE */
+          display: none;
+        }
 
 `
 const Bigger = styled.svg`
@@ -68,6 +71,7 @@ animation: 10s ${moveBall} linear infinite;
     z-index: 2;
     @media screen and (max-width: 600px) {
   /* grid-template-columns: repeat(3,1fr) !important; */
+  animation: none;
   width: 70%;
     height: 70%;
     

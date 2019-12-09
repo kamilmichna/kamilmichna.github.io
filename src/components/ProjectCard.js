@@ -14,6 +14,13 @@ const ProjectCardContainer = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    @media screen and (max-width: 500px) {
+        width: 90vw;
+        margin: 20px;
+        box-sizing: border-box;
+        height: 90vh;
+            
+    }
     border-radius: 10px;
 `
 const ProjectCardBanner = styled.div`
@@ -40,6 +47,10 @@ align-items: center;
     box-sizing: border-box;
     line-height: 1.5;
     height: 65%;
+    @media screen and (max-width: 500px) {
+        font-size: 2.5em;
+            
+    }
 `
 const ProjectCardButtonContainer = styled.div`
     width: 100%;
@@ -49,9 +60,15 @@ const ProjectCardButtonContainer = styled.div`
     align-items: center;
     & .button_container{ 
         width: 90%;
-        height: 50%;
+        height: 70%;
+        @media screen and (max-width: 500px) {
+            * {
+                font-size: 3em;
+            }
+        }
 
     }
+   
 `
 const ProjectCard = (props) => {
     return(

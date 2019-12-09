@@ -25,6 +25,10 @@ const PageSection = styled.section`
 
     &.section--contact{
       grid-row: 78 / span 5;
+      @media screen and (max-width: 500px) {
+        grid-row: 80 / span 5;
+            
+        }
       & p{
           display: flex;
           justify-content: center;
@@ -34,6 +38,11 @@ const PageSection = styled.section`
           font-size: 3em;
           font-family: Overpass;
           font-weight: 600;
+        }
+        & label{
+          @media screen and (max-width: 500px) {
+            display: none;           
+          }
         }
      
       & .contact--form{
@@ -47,8 +56,9 @@ const PageSection = styled.section`
         background: linear-gradient(89.85deg, #1A06FF -18.12%, #0CC2FC 103.29%);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         padding: 40px;
-        @media screen and (max-width: 600px) {
-          display: none;
+        @media screen and (max-width: 500px) {
+          grid-template-columns: 1fr;
+          grid-row: 3/ span 20;
         }
         & a{
           display: flex;
@@ -66,6 +76,9 @@ const PageSection = styled.section`
         display: flex;
         justify-content: center;
         align-items: center;
+        @media screen and (max-width: 500px) {
+          grid-column: 1;
+        }
       }
         & .form__email{
           grid-column: 1/3;
@@ -77,6 +90,11 @@ const PageSection = styled.section`
           padding: 30px;
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           border-radius: 10px;
+          @media screen and (max-width: 500px) {
+          grid-column: 1;
+          grid-row: 4;
+          width: 100%;
+        }
         }
         & .newsletter__info{
           grid-column: 3;
@@ -86,6 +104,11 @@ const PageSection = styled.section`
           font-weight: 500;
           color : white;
           text-align: center;
+          @media screen and (max-width: 500px) {
+          grid-column: 1;
+          grid-row: 8;
+          font-size: 3em;
+        }
 
         }
         & .social_media__icons{
@@ -93,12 +116,18 @@ const PageSection = styled.section`
           grid-template-columns: repeat(3,1fr);
           grid-column: 3;
           grid-row: 2/4;
+          @media screen and (max-width: 500px) {
+          grid-column: 1;
+          grid-row: 2;
+          }
           & svg{
             margin-left: auto;
             margin-right: auto;
             height: 100%;
             transition-duration: 0.5s;
-         
+            @media screen and (max-width: 500px) {
+              height: 50%;
+          }
             & path{
               box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             }
@@ -121,8 +150,12 @@ const PageSection = styled.section`
           box-sizing: border-box;
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           border-radius: 10px;
-          
-          
+          @media screen and (max-width: 500px) {
+            grid-column: 1;
+            width: 100%;
+            grid-row: 5/8;
+        }
+   
         }
         & .form__send{
           grid-row: 5;
@@ -140,6 +173,10 @@ const PageSection = styled.section`
           margin-right: auto;
           height: 7vh;
           transition-duration:0.5s;
+          @media screen and (max-width: 500px) {
+            grid-column: 1;
+            grid-row: 9;
+        }
           &:hover{
                background: white;
                cursor: pointer;
@@ -174,7 +211,7 @@ const PageSection = styled.section`
       & .hero__subdescription{
         grid-column: 7/11;
         grid-row: 7/9;
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 500px) {
           grid-row: 3/5;
           grid-column: 8/11;
         }
@@ -190,7 +227,7 @@ const PageSection = styled.section`
       }
       &.section--technologies{
         grid-row: 16/ span 17;
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 500px) {
           grid-row: 15/ span 17;
         }
         & .technologies__heading{
@@ -202,7 +239,7 @@ const PageSection = styled.section`
           font-size: 3.6em;
           font-weight: 600;
           color: rgba(0, 0, 0, 0.87);
-          @media screen and (max-width: 600px) {
+          @media screen and (max-width: 500px) {
             grid-column: 1/13;
             grid-row: 1;
           }
@@ -213,15 +250,25 @@ const PageSection = styled.section`
    
       &.section--posts{
         grid-row: 33/ span 13;
+        @media screen and (max-width: 500px) {
+          grid-row: 25/ span 13;
+          }
         & .heading{
           display: flex;
           justify-content: center;
           align-items: center;
           grid-column: 3/11;
-          grid-row: 2/4;
+          grid-row: 1/4;
           background: linear-gradient(180deg, #0CB7FC 0%, #1A06FF 99.99%, rgba(12, 194, 252, 0) 100%);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
           border-radius: 20px 0px;
+          @media screen and (max-width: 500px) {
+            padding: 20px;
+            text-align: center;
+            line-height: 1.5;
+            grid-column: 1/13;
+            border-radius: 0px;
+          }
           & p{ 
             font-size: 2.25em;
             color: white;
@@ -234,6 +281,9 @@ const PageSection = styled.section`
           grid-row: 5/15;
           display: grid;
           grid-template-columns: repeat(2,1fr);
+          @media screen and (max-width: 500px) {
+            grid-template-columns: 1fr;
+          }
           grid-gap: 10%;
           padding-left: 10%;
           padding-right: 10%;
@@ -241,6 +291,9 @@ const PageSection = styled.section`
       }
       &.section--projects{
         grid-row: 46/ span 16;
+        @media screen and (max-width: 500px) {
+          grid-row: 36/ span 16;
+          }
         & > p {
           grid-column: 1/13;
           display: flex;
@@ -248,6 +301,10 @@ const PageSection = styled.section`
           align-items: center;
           font-size: 3em;
           font-weight: 600;
+          @media screen and (max-width: 500px) {
+            font-size: 3em;
+            text-align: center;
+          }
         }
         & .project_card_container{
           display: flex;
@@ -256,11 +313,20 @@ const PageSection = styled.section`
           grid-column: 1/13;
           grid-row: 3/17;
           background: linear-gradient(90deg, #0CC2FC -33.42%, #0B00F7 178.31%, #1A06FF 188.7%, rgba(196, 196, 196, 0) 188.72%);
+          @media screen and (max-width: 500px) {
+              flex-direction: column;
+              grid-row: 3/50;
+            
+          }
        
         }
       }
       &.section--resumee{
         grid-row: 62/ span 16;
+        @media screen and (max-width: 500px) {
+          grid-row: 70/ span 16;
+            
+          }
         & p{
           display: flex;
           justify-content: center;
@@ -280,7 +346,7 @@ const PageSection = styled.section`
           grid-row: 3/21;
           display: flex;
           justify-content:center;
-          @media screen and (max-width: 600px) {
+          @media screen and (max-width: 500px) {
             grid-row: 3/15;
           }
 
@@ -305,7 +371,7 @@ const TechnologiesContainer = styled.ul`
     grid-template-columns: repeat(3,1fr);
     grid-gap: 30px;
     grid-template-rows: repeat(3,1fr);
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 500px) {
       grid-column: 2/12;
       grid-row: 3/16;
       grid-gap: 0px;
@@ -339,8 +405,6 @@ const IndexPage = () => {
     setLng(lang);
   }
   useEffect(()=>{
-      console.log(lng)
-      console.log(i18n.language)
       i18n.changeLanguage(lng);
   },[lng])
   return(  
@@ -432,9 +496,9 @@ const IndexPage = () => {
 
       <form className='contact--form' action="https://formspree.io/xayyagnn" method="POST">
       <label>{i18n.t('contact.email')}</label>
-      <input className="form__email" type="text"  name="_replyto"/>
+      <input placeholder={i18n.t('contact.pl1')} className="form__email" type="text"  name="_replyto"/>
       <label>{i18n.t('contact.content')}</label>
-      <textarea className='form__content' type="text" name="content"/>
+      <textarea placeholder={i18n.t('contact.pl2')} className='form__content' type="text" name="content"/>
       <p className="social_media__paragraph">
         Social Media
       </p>
