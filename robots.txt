@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://kamilmichna.github.io/sitemap.xml
-Host: https://kamilmichna.github.io
