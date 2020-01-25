@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import { Link } from "gatsby"
 import SVGLine from '../components/SVGLine';
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -8,13 +7,12 @@ import '@csstools/normalize.css';
 import SVGBalls from '../components/SVGBalls';
 import styled from 'styled-components';
 import i18n from '../configs/i18n';
-import { useTranslation } from 'react-i18next';
 import { initReactI18next } from 'react-i18next';
 import TechnologyCard from '../components/TechnologyCard';
 import NewestPostCardContainer from '../components/NewestPostCard';
 import ProjectCard from '../components/ProjectCard';
 import projectsConfig from '../configs/projectsConfig';
-import resume_pl from '../images/resume-1.png';
+import resume_pdf from '../images/resume-1.pdf'
 const PageSection = styled.section`
     display: grid;
     grid-template-columns: repeat(12,1fr);
@@ -25,8 +23,8 @@ const PageSection = styled.section`
 
     &.section--contact{
       grid-row: 78 / span 5;
-      @media screen and (max-width: 500px) {
-        grid-row: 80 / span 5;
+      @media screen and (max-width: 600px) {
+        grid-row: 73 / span 5;
             
         }
       & p{
@@ -56,9 +54,9 @@ const PageSection = styled.section`
         background: linear-gradient(89.85deg, #1A06FF -18.12%, #0CC2FC 103.29%);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         padding: 40px;
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 600px) {
           grid-template-columns: 1fr;
-          grid-row: 3/ span 20;
+          grid-row: 3/ span 18;
         }
         & a{
           display: flex;
@@ -90,10 +88,11 @@ const PageSection = styled.section`
           padding: 30px;
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           border-radius: 10px;
-          @media screen and (max-width: 500px) {
-          grid-column: 1;
-          grid-row: 4;
-          width: 100%;
+          @media screen and (max-width: 600px) {
+            grid-column: 1;
+            grid-row: 4;
+            width: 100%;
+            padding: 20px;
         }
         }
         & .newsletter__info{
@@ -199,21 +198,26 @@ const PageSection = styled.section`
       grid-row: 3/16;
       & p {
         color: rgba(0, 0, 0, 0.87);
-        font-weight: 600;
+        font-weight: 500;
           font-size: 3.6em;
           line-height: 1.5;
 
           & span{
               color: #0CC2FC;
+              @media screen and (max-width: 1100px) {
+                font-size: 2em;
+
+              }
           }
       }
       
       & .hero__subdescription{
         grid-column: 7/11;
         grid-row: 7/9;
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 1100px) {
           grid-row: 3/5;
-          grid-column: 8/11;
+          grid-column: 7/12;
+          font-size: 3em;
         }
           
       }
@@ -221,14 +225,19 @@ const PageSection = styled.section`
 
           grid-column: 2/6;
           grid-row: 3;
-
+          @media screen and (max-width: 1100px) {
+            font-size: 3em;
+        }
       }
     
       }
       &.section--technologies{
         grid-row: 16/ span 17;
-        @media screen and (max-width: 500px) {
-          grid-row: 15/ span 17;
+        @media screen and (max-width: 600px) {
+          grid-row: 8/ span 17;
+        }
+        @media screen and (max-width: 1100px) and (min-width: 601px) {
+          grid-row: 13/ span 17;
         }
         & .technologies__heading{
           display: flex;
@@ -237,9 +246,12 @@ const PageSection = styled.section`
 
           grid-column: 2/6;
           font-size: 3.6em;
-          font-weight: 600;
+          font-weight: 500;
           color: rgba(0, 0, 0, 0.87);
-          @media screen and (max-width: 500px) {
+          @media screen and (max-width: 1100px) and (min-width: 601px){
+            grid-column: 2/13;
+          }
+          @media screen and (max-width: 600px) {
             grid-column: 1/13;
             grid-row: 1;
           }
@@ -250,8 +262,8 @@ const PageSection = styled.section`
    
       &.section--posts{
         grid-row: 33/ span 13;
-        @media screen and (max-width: 500px) {
-          grid-row: 25/ span 13;
+        @media screen and (max-width: 600px) {
+          grid-row: 19/ span 13;
           }
         & .heading{
           display: flex;
@@ -291,8 +303,8 @@ const PageSection = styled.section`
       }
       &.section--projects{
         grid-row: 46/ span 16;
-        @media screen and (max-width: 500px) {
-          grid-row: 36/ span 16;
+        @media screen and (max-width: 600px) {
+          grid-row: 30/ span 16;
           }
         & > p {
           grid-column: 1/13;
@@ -300,8 +312,9 @@ const PageSection = styled.section`
           justify-content: center;
           align-items: center;
           font-size: 3em;
-          font-weight: 600;
-          @media screen and (max-width: 500px) {
+          font-weight: 500;
+          @media screen and (max-width: 1100px) {
+            padding: 25px;
             font-size: 3em;
             text-align: center;
           }
@@ -323,8 +336,8 @@ const PageSection = styled.section`
       }
       &.section--resumee{
         grid-row: 62/ span 16;
-        @media screen and (max-width: 500px) {
-          grid-row: 70/ span 16;
+        @media screen and (max-width: 600px) {
+          grid-row: 63/ span 16;
             
           }
         & p{
@@ -371,7 +384,12 @@ const TechnologiesContainer = styled.ul`
     grid-template-columns: repeat(3,1fr);
     grid-gap: 30px;
     grid-template-rows: repeat(3,1fr);
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 1100px) and (min-width: 601px)  {
+      grid-column: 2/12;
+      grid-row: 3/16;
+      grid-gap: 30px;
+    }
+    @media screen and (max-width: 600px)  {
       grid-column: 2/12;
       grid-row: 3/16;
       grid-gap: 0px;
@@ -380,9 +398,9 @@ const TechnologiesContainer = styled.ul`
 
 
 const IndexPage = () => {
-  const [lng,setLng] = useState();
+  const [lng,setLng] = useState('pl');
   const projectCards = projectsConfig.map(el=>(
-    <ProjectCard thisSite={el.thisSite} to={el.to} text={el.text} title={el.title}></ProjectCard>
+    <ProjectCard thisSite={el.thisSite} to={el.to} text={lng === 'pl' ? el.textEng: el.textPl  } title={el.title}></ProjectCard>
   ))
   useEffect(()=>{
     
@@ -406,6 +424,7 @@ const IndexPage = () => {
   }
   useEffect(()=>{
       i18n.changeLanguage(lng);
+
   },[lng])
   return(  
   <Layout>
@@ -414,9 +433,10 @@ const IndexPage = () => {
     <SVGLine/>
     <SVGBalls/>
     <PageSection id='hero' className='section--hero'>
-      <p className='hero__description'>{i18n.t('hero.first1')} <span>{i18n.t('hero.first2')}</span> {i18n.t('hero.first3')}</p>
+      <p className='hero__description'>{i18n.t('hero.first1')} {i18n.t('hero.first2')} {i18n.t('hero.first3')}</p>
       <p className='hero__subdescription'>{i18n.t('hero.second')}</p>
     </PageSection>
+
     <PageSection className='section--technologies' id='technologies'>
         <p className='technologies__heading'>{i18n.t('technologies.heading')}</p>
         <TechnologiesContainer>
@@ -479,12 +499,11 @@ const IndexPage = () => {
     <PageSection className='section--resumee'>
       <p>{i18n.t('resume.heading')}</p>
       <div className='img_wrapper'>
-        <a href='/ads' target='__blank'>
-          <img src={resume_pl}/>
-        </a>
+      <img src={resume_pdf}/>
       </div>
 
     </PageSection>
+
     <PageSection className='section--projects'>
       <p>{i18n.t('projects.text')}</p>
       <div className='project_card_container'>{projectCards}</div>

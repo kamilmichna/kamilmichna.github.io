@@ -61,8 +61,13 @@ a{
 }
 @media (max-width: 1000px) {
     body{
-        font-size: 8px;
+        font-size: 5px;
     }
 }
+
+html {
+    scroll-behavior: smooth;
+  }
 `
+
 export default GlobalStyle;
