@@ -327,8 +327,9 @@ const PageSection = styled.section`
           grid-row: 3/17;
           background: linear-gradient(90deg, #0CC2FC -33.42%, #0B00F7 178.31%, #1A06FF 188.7%, rgba(196, 196, 196, 0) 188.72%);
           @media screen and (max-width: 500px) {
+              
               flex-direction: column;
-              grid-row: 3/50;
+              grid-row: 4/ span 50 !important;
             
           }
        
@@ -337,7 +338,7 @@ const PageSection = styled.section`
       &.section--resumee{
         grid-row: 62/ span 16;
         @media screen and (max-width: 600px) {
-          grid-row: 63/ span 16;
+          grid-row: 64/ span 16;
             
           }
         & p{

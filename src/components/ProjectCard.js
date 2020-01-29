@@ -18,7 +18,7 @@ const ProjectCardContainer = styled.div`
         width: 90vw;
         margin: 20px;
         box-sizing: border-box;
-        height: 90vh;
+        height: 40vh;
             
     }
     border-radius: 10px;
