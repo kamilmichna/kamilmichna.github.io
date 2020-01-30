@@ -13,18 +13,19 @@ import NewestPostCardContainer from '../components/NewestPostCard';
 import ProjectCard from '../components/ProjectCard';
 import projectsConfig from '../configs/projectsConfig';
 import resume_pdf from '../images/resume-1.pdf'
+import InfoBar from '../components/InfoBar';
 const PageSection = styled.section`
     display: grid;
     grid-template-columns: repeat(12,1fr);
     grid-auto-rows: 5vh;
-      grid-column: 1/ span 13;
+    grid-column: 1/  13;
     min-height: 10vh;
     z-index: 999;
 
     &.section--contact{
       grid-row: 78 / span 5;
       @media screen and (max-width: 600px) {
-        grid-row: 73 / span 5;
+        grid-row: 79 / span 5;
             
         }
       & p{
@@ -338,7 +339,7 @@ const PageSection = styled.section`
       &.section--resumee{
         grid-row: 62/ span 16;
         @media screen and (max-width: 600px) {
-          grid-row: 64/ span 16;
+          grid-row: 67/ span 16;
             
           }
         & p{
@@ -433,11 +434,12 @@ const IndexPage = () => {
     <Header onChangeLanguage={onChangeLanguage}/>
     <SVGLine/>
     <SVGBalls/>
+    <InfoBar/>
     <PageSection id='hero' className='section--hero'>
       <p className='hero__description'>{i18n.t('hero.first1')} {i18n.t('hero.first2')} {i18n.t('hero.first3')}</p>
       <p className='hero__subdescription'>{i18n.t('hero.second')}</p>
     </PageSection>
-
+ 
     <PageSection className='section--technologies' id='technologies'>
         <p className='technologies__heading'>{i18n.t('technologies.heading')}</p>
         <TechnologiesContainer>

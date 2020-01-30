@@ -64,7 +64,6 @@ a{
         font-size: 5px;
     }
 }
-
 html {
     scroll-behavior: smooth;
   }
