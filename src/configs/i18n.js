@@ -13,7 +13,8 @@ i18next
         translation: {
           hero: { first1: `My name is Kamil and I'm a web developer. And You may need`, first2: 'Me', first3: `in future.`, second: `I'm 18 years old web developer from Krosno. I became interested in coding when i turn 16 and it still stays my biggest hobby. Go down to see more!`},
           languageButtons: {pl:"Polish", en: "English"},
-          navButtons: {first: 'Coming Soon', second: "Github", third: "Contact"},
+          
+          navButtons: {first: 'Dostępne wkrótce', second: "Github", third: "Kontakt"},
           technologies: {heading: "Technologies that I use"},
           newestposts: {heading: 'I`m also writing a blog about webdevelopement. Please give me a favor and read few articles!'},
           resume: {heading: "Still interested? Check out my resume!"},
@@ -25,7 +26,7 @@ i18next
         translation: {
           hero: { first1: 'Mam na imię Kamil i jestem web developerem. Całkiem możliwe, że będziesz potrzebował', first2:'Mnie', first3: 'w przyszłości.', second: 'Jestem 18 letnim web developerem z Krosna. Zainteresowałem się programowaniem w wieku 16 lat i nadal pozostało ono moim największym hobby. Zejdź na dół by dowiedzieć się więcej! ' },
           languageButtons: {pl:"Polski", en: "Angielski"},
-          navButtons: {first: 'Dostępne wkrótce', second: "Github", third: "Kontakt"},
+          navButtons: {first: 'Coming Soon', second: "Github", third: "Contact"},
           technologies: {heading: "Technologie których używam "},
           newestposts: {heading: 'Prowadzę także bloga poświęconego web developementowi. Spraw mi tę przyjemność i przeczytaj kilka artykułów!'},
           resume: {heading: "Nadal zainteresowany? Sprawdź moje resume!"},

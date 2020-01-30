@@ -23,13 +23,26 @@ align-items: center;
         color: #1A06FF;
         cursor: pointer;
     }
+    @media screen and (max-width: 1100px){
+        background-color: white;
+        color: rgba(0,0,0,0.6);
+        background: none;
+        box-shadow: none;
+        height: 10vh;
+        font-size: 3em !important;
+            &:hover{
+            border: none;
+            color: #0CC2FC;
+            cursor: pointer;
+        }
+    }
 
 `
 
  const Button = (props) => {
 
     return(
-        <ButtonContainer target={props.isBlank ? '_blank' : '_self' } href={props.to}>{props.children}</ButtonContainer>
+        <ButtonContainer onClick={props.toggleNav} target={props.isBlank ? '_blank' : '_self' } href={props.to}>{props.children}</ButtonContainer>
     )
  }
 

@@ -1,9 +1,10 @@
 import React from 'react';
 import styled, {keyframes} from 'styled-components';
-
+// this is hello boy visual studio ngr
 const moveLineDash = keyframes`
     to{
         stroke-dashoffset: -1000;
+        
     }
 `
 const Line = styled.svg`

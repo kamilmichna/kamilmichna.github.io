@@ -18,7 +18,7 @@ const ProjectCardContainer = styled.div`
         width: 90vw;
         margin: 20px;
         box-sizing: border-box;
-        height: 90vh;
+        height: 40vh;
             
     }
     border-radius: 10px;
@@ -74,7 +74,7 @@ const ProjectCard = (props) => {
     return(
         <ProjectCardContainer>
             <ProjectCardBanner>{props.title}</ProjectCardBanner>
-            <ProjectCardText>{props.text}</ProjectCardText>
+            <ProjectCardText>{props.text }</ProjectCardText>
             <ProjectCardButtonContainer>
                 <div className='button_container'>
                     <Button isBlank to={props.to} >{props.thisSite ? i18n.t('projects.thisSite') : i18n.t('projects.button')  }</Button>
