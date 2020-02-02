@@ -3,11 +3,20 @@ module.exports = {
     title: `Kamil Michna`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `Kamil Michna`,
+    siteUrl: 'http://kamilmichna.pl/'
   },
   plugins: [
-
+    'gatsby-plugin-cname',
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-analytics`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "UA-124208891-3",
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

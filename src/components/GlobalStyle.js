@@ -37,7 +37,9 @@ body {
  overflow-x: hidden;
  font-family: 'Overpass', sans-serif;
  background-color: #ffffff;
+ height: auto !important;
 }
+
 ol, ul {
  list-style: none;
 }
