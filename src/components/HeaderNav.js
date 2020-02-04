@@ -44,7 +44,7 @@ const HeaderNav = (props) => {
       <Button toggleNav={props.toggleNav} className="NavButton" isBlank to="https://github.com/kamilmichna">
         {i18n.t("navButtons.second")}
       </Button>
-      <Button toggleNav={props.toggleNav} className="NavButton" to='#section--contact'>
+      <Button toggleNav={props.toggleNav} className="NavButton" to='https://kamilmichna.pl/#section--contact'>
         {i18n.t("navButtons.third")}
       </Button>
      
