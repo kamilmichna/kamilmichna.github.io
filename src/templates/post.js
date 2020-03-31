@@ -38,7 +38,7 @@ box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   padding: 2px;
   background-color: lightgrey;
 }
-& p {
+& div, p {
   text-indent: 20px;
   font-size: 1.5em;
   padding-left: 20px;
@@ -63,7 +63,7 @@ position: absolute;
 background: linear-gradient(rgb(12, 183, 252) 0%, rgb(26, 6, 255) 99.99%, rgba(12, 194, 252, 0) 100%);
 padding-left: 30px;
 box-sizing: border-box;
-  & p {
+  & div {
     font-size: 2em;
     color: white;
   }
@@ -84,7 +84,7 @@ export default ({ data }) => {
             <h2 dangerouslySetInnerHTML={{ __html: post.title }}></h2>
             <p  dangerouslySetInnerHTML={{ __html: post.date }}></p>
           </PostContentHeader>
-          <p dangerouslySetInnerHTML={{ __html: post.content }}></p>
+          <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
         </PostContent>
 
       </PostContainer>

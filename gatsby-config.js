@@ -12,7 +12,7 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // your WordPress source
-        baseUrl: `kamilmichna.art.blog`,
+        baseUrl: `kamilmichnaphotographyphoto.wordpress.com`,
         protocol: `https`,
         // is it hosted on wordpress.com, or self-hosted?
         hostingWPCOM: true,
