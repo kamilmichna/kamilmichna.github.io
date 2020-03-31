@@ -38,13 +38,13 @@ const Nav = styled.nav`
 const HeaderNav = (props) => {
   return (
     <Nav className={props.hamburgerActive ? '--active' : ''}>
-       <Button  toggleNav={props.toggleNav} className="NavButton" to="/">
+       <Button  toggleNav={props.toggleNav} className="NavButton" to="https://kamilmichna.pl/posts">
         {i18n.t("navButtons.first")}
       </Button> 
       <Button toggleNav={props.toggleNav} className="NavButton" isBlank to="https://github.com/kamilmichna">
         {i18n.t("navButtons.second")}
       </Button>
-      <Button toggleNav={props.toggleNav} className="NavButton" to='#section--contact'>
+      <Button toggleNav={props.toggleNav} className="NavButton" to='https://kamilmichna.pl/#section--contact'>
         {i18n.t("navButtons.third")}
       </Button>
      

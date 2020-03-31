@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import React, { useEffect, useState } from "react";
-import Button from "./Button";
 import HeaderNav from "./HeaderNav";
 import SwitchButton from "./SwitchButton";
-import i18n from "../configs/i18n";
 
 const HeaderContainer = styled.header`
   display: grid;
@@ -145,7 +143,7 @@ const Header = props => {
     <HeaderContainer id="header">
       <Title>Kamil Michna {navIsActive}</Title>
       <HeaderNav toggleNav={onHamburgerButtonClick} hamburgerActive={navIsActive} />
-      <SwitchButton onSwitchChange={onChangeLanguageClick} />
+      {props.hideLanguageSwitch==='false' && (<SwitchButton onSwitchChange={onChangeLanguageClick} />)}
       <HamburgerButton onClick={onHamburgerButtonClick}>menu</HamburgerButton>
     </HeaderContainer>
   );

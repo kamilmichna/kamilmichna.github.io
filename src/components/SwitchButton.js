@@ -73,7 +73,7 @@ const SwitchButton = (props) => {
     }
     useEffect(()=>{
         props.onSwitchChange(state);
-    },[state])
+    },[state, props])
     return(
         <Container  onClick={onSwitchClick}>
             <Text className={`text--right ${(state === 'pl' ? 'text--active' : '')}`} id='options_first'>ENG</Text>

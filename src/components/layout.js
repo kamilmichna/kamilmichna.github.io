@@ -5,13 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, {useState, useEffect} from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import styled from 'styled-components';
 import GlobalStyle from './GlobalStyle'
 import i18n from '../configs/i18n';
-
-import Header from './Header';
 const LayoutContainer = styled.div`
 
   font-size: 10px;
@@ -22,7 +20,7 @@ const LayoutContainer = styled.div`
   grid-template-columns: repeat(12,1fr);
   grid-gap: 20px;
   grid-auto-rows: 5vh;
-  height: 200vh;
+ 
   @media screen and (max-width: 600px) {
       *{
         grid-template-columns: 1fr;
