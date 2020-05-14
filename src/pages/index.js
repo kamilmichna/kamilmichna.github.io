@@ -8,6 +8,7 @@ import {GlobalStyle} from '../configs/GlobalStyle';
 import About from '../sections/About/About';
 import Technology from '../sections/Technology/Technology';
 import TimeLine from '../sections/TimeLine/TimeLine';
+import Projects from '../sections/Projects/Projects';
 const theme = {
   dark: '#1B1B1B',
   bright: '#FFF'
@@ -24,6 +25,7 @@ const IndexPage = (props) => {
           <About/>
           <Technology/>
           <TimeLine/>
+          <Projects/>
       </Layout>
     </ThemeProvider>
   )

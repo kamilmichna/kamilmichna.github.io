@@ -1,5 +1,5 @@
 import React, {useRef,useState ,useEffect} from "react";
-import {TimeLineSection,Time,CardsContainer,CardContainer} from './TimeLine.styled';
+import {TimeLineSection,Time,CardsContainer,Counter,CardContainer} from './TimeLine.styled';
 import gsap  from "gsap"; 
 import Cards from '../../configs/timelineComponents';
 import Button from '../../components/Button/Button';
@@ -63,6 +63,7 @@ const TimeLine = (props) => {
             <CardsContainer ref={cardsContainer}>{cards}</CardsContainer>
             <Button  className='button--prev' event={prevCard} text="Back to ther roots"/>
             <Button  className='button--next' event={nextCard} text="Next card"/>
+            <Counter>{actualCard} out of {Cards.length}</Counter>
         </TimeLineSection>
     )
 }

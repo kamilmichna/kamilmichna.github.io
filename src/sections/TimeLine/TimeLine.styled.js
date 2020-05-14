@@ -61,3 +61,12 @@ export const CardsContainer = styled.ul`
     top: 25vh;
 
 `
+export const Counter = styled.p`
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ grid-column: 4;
+ grid-row: 9/10;
+ font-weight: 900;
+ color: white;
+`
