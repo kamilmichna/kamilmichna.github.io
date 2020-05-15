@@ -15,7 +15,7 @@ export const ButtonContainer = styled.button`
     &::before{
         transition-duration: 0.5s;
         position: absolute;
-        content: 'asd';
+        content: '';
         width: 100%;
         height: 100%;
         left: 5px;

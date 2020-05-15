@@ -10,48 +10,50 @@ const Technology = (props) => {
     const technologyStack = useRef(null);
     const technologyStackMask = useRef(null);
     const whiteParagraph = useRef(null);
-    const controller = new ScrollMagic.Controller();
     const otherTechnologies = useRef(null);
     const databasesTechnologyContainer = useRef(null);
     const wantToLearn = useRef(null);
     const tl = gsap.timeline();
     useEffect(()=>{
-        ScrollMagicPluginGsap(ScrollMagic, gsap);
-        new ScrollMagic.Scene({
-            triggerElement: technologyStack.current,
-            reverse: false
-        }).setTween(tl.from(asideParagraph.current,0.5,{
-            x: 1000,
-            ease: "expo.out"
-        })).setTween(tl.from(technologyStack.current,0.5,{
-            y: 100,
-            opacity: 0,
-            ease: "expo.out"
-        })).setTween(tl.from(technologyStackMask.current,0.25,{
-            x: '-50vw',
-            ease: "expo.out"
-        })).setTween(tl.from(whiteParagraph.current,0.25,{
-            y: 100,
-            opacity: 0,
-            ease: "expo.out"
-        })).setTween(tl.from(databasesTechnologyContainer.current,0.25,{
-            x: '-50vw',
-            opacity: 0,
-            ease: "expo.out"
-        })).setTween(tl.from(otherTechnologies.current,0.25,{
-            x: '-50vw',
-            opacity: 0,
-            ease: "expo.out"
-        })).setTween(tl.from(wantToLearn.current,2,{
-            y: 100,
-            opacity: 0,
-            ease: "expo.out"
-        })).addTo(controller);
-    },[controller,tl])
+        if (typeof window !== 'undefined'){
+            const controller = new ScrollMagic.Controller();
+            ScrollMagicPluginGsap(ScrollMagic, gsap);
+            new ScrollMagic.Scene({
+                triggerElement: technologyStack.current,
+                reverse: false
+            }).setTween(tl.from(asideParagraph.current,0.5,{
+                x: 1000,
+                ease: "expo.out"
+            })).setTween(tl.from(technologyStack.current,0.5,{
+                y: 100,
+                opacity: 0,
+                ease: "expo.out"
+            })).setTween(tl.from(technologyStackMask.current,0.25,{
+                x: '-50vw',
+                ease: "expo.out"
+            })).setTween(tl.from(whiteParagraph.current,0.25,{
+                y: 100,
+                opacity: 0,
+                ease: "expo.out"
+            })).setTween(tl.from(databasesTechnologyContainer.current,0.25,{
+                x: '-50vw',
+                opacity: 0,
+                ease: "expo.out"
+            })).setTween(tl.from(otherTechnologies.current,0.25,{
+                x: '-50vw',
+                opacity: 0,
+                ease: "expo.out"
+            })).setTween(tl.from(wantToLearn.current,2,{
+                y: 100,
+                opacity: 0,
+                ease: "expo.out"
+            })).addTo(controller);
+
+        }
+    },[tl])
     return (
         <TechnologySection>
             <TechnologyStack ref={technologyStack}>Technology stack
-                <div ref={technologyStackMask} ></div>
             </TechnologyStack>
             <FrontendTechnologyContainer>
                 <p>

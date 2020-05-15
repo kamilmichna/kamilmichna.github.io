@@ -8,7 +8,6 @@ import Card from '../../components/Card/Card';
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 const TimeLine = (props) => {
     const [actualCard, setActualCard] = useState(1);
-    const controller = new ScrollMagic.Controller();
     const tl = gsap.timeline();
     const cardsContainer = useRef(null);
     const timelineHeader = useRef(null);
@@ -41,21 +40,23 @@ const TimeLine = (props) => {
         )
     })
     useEffect(() => {
-        ScrollMagicPluginGsap(ScrollMagic, gsap);
-        new ScrollMagic.Scene({
-            triggerElement: timelineHeader.current,
-            reverse: false
-        }).setTween(tl.from(timelineHeader.current,1,{
-            x: '100vw',
-            ease: "expo.out"
-        })).setTween(tl.from(cardsContainer.current,1,{
-            x: '100vw',
-            ease: "expo.out"
-        })).setTween(tl.from(timelineHeader.current,1,{
-            textShadow: '5px 100px 	rgba(21, 168, 115,0)',
-            ease: "expo.out"
-        })).addTo(controller);
-       
+        if (typeof window !== 'undefined'){
+            const controller = new ScrollMagic.Controller();
+            ScrollMagicPluginGsap(ScrollMagic, gsap);
+            new ScrollMagic.Scene({
+                triggerElement: timelineHeader.current,
+                reverse: false
+            }).setTween(tl.from(timelineHeader.current,1,{
+                x: '100vw',
+                ease: "expo.out"
+            })).setTween(tl.from(cardsContainer.current,1,{
+                x: '100vw',
+                ease: "expo.out"
+            })).setTween(tl.from(timelineHeader.current,1,{
+                textShadow: '5px 100px 	rgba(21, 168, 115,0)',
+                ease: "expo.out"
+            })).addTo(controller);
+        }
     }, [])
     return(
         <TimeLineSection>

@@ -5,6 +5,6 @@ body{
   overflow-x: hidden;
 }
   *{
-      cursor: none;
+    
   }
 `

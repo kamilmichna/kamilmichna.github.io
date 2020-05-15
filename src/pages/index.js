@@ -9,6 +9,7 @@ import About from '../sections/About/About';
 import Technology from '../sections/Technology/Technology';
 import TimeLine from '../sections/TimeLine/TimeLine';
 import Projects from '../sections/Projects/Projects';
+import Contact from '../sections/Contact/Contact';
 const theme = {
   dark: '#1B1B1B',
   bright: '#FFF'
@@ -26,6 +27,7 @@ const IndexPage = (props) => {
           <Technology/>
           <TimeLine/>
           <Projects/>
+          <Contact/>
       </Layout>
     </ThemeProvider>
   )

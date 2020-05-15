@@ -6,8 +6,7 @@ export const CursorContainer = styled.div`
     border-radius: 50%;
     /* background-color: red; */
     pointer-events: none;
-    cursor: none;
-    z-index: 9999999999999999999999999999999999999;
+    z-index: 9999999;
     border: 5px solid black;
     backdrop-filter: invert(100%);
     mix-blend-mode: difference;

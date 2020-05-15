@@ -7,39 +7,30 @@ import Button from '../../components/Button/Button';
 import projectComponents from '../../configs/projectsComponents';
 const Technology = (props) => {
     const headerRef = useRef(null);
-    const controller = new ScrollMagic.Controller();
-    // const tl = gsap.timeline();
-    // useEffect(()=>{
-    //     ScrollMagicPluginGsap(ScrollMagic, gsap);
-    //     new ScrollMagic.Scene({
-    //         triggerElement: aboutText.current,
-    //         reverse: false
-    //     }).setTween(tl.from(aboutText.current,1,{
-    //         opacity: 0
-    //     })).addTo(controller);
-    // },[controller,tl])
-    // return (
     useEffect(()=>{
-        ScrollMagicPluginGsap(ScrollMagic, gsap);
-        new ScrollMagic.Scene({
-            triggerElement: headerRef.current,
-            reverse: false
-        }).setTween(
-            gsap.from(".project__card", 1, {
-                scale: 0.2, 
-                opacity: 0,
-                y: 200,
-                yoyo: true, 
-                repeat: 0, 
-                ease: "power1.inOut",
-                delay:0,
-                stagger: {
-                  amount: 1, 
-                  grid: "auto",
-                  from: "left"
-                }
-            })
-        ).addTo(controller);
+        if (typeof window !== 'undefined'){
+            const controller = new ScrollMagic.Controller();
+            ScrollMagicPluginGsap(ScrollMagic, gsap);
+            new ScrollMagic.Scene({
+                triggerElement: headerRef.current,
+                reverse: false
+            }).setTween(
+                gsap.from(".project__card", 1, {
+                    scale: 0.2, 
+                    opacity: 0,
+                    y: 200,
+                    yoyo: true, 
+                    repeat: 0, 
+                    ease: "power1.inOut",
+                    delay:0,
+                    stagger: {
+                      amount: 1, 
+                      grid: "auto",
+                      from: "left"
+                    }
+                })
+            ).addTo(controller);
+        }
       
     },[])
     let projects = [];

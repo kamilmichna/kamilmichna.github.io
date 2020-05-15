@@ -4,7 +4,7 @@ import {CursorContainer} from './Cursor.styled';
 const Cursor = (props) => {
     const cursor = useRef(null);
     useEffect(()=>{
-        window.addEventListener('mousemove',(e)=>{
+        document.addEventListener('mousemove',(e)=>{
             if (e.clientY > 40  && e.clientX > 40){
                 gsap.to(cursor.current,0.2,{
                     x: e.pageX-30,
@@ -13,12 +13,12 @@ const Cursor = (props) => {
                 })
             }
         });
-        window.addEventListener('mousedown',(e)=>{
+        document.addEventListener('mousedown',(e)=>{
             gsap.to(cursor.current,0.2,{
                 scale: 1.5,
             })
         });
-        window.addEventListener('mouseup',(e)=>{
+        document.addEventListener('mouseup',(e)=>{
             gsap.to(cursor.current,0.2,{
                 scale: 1,
             })
