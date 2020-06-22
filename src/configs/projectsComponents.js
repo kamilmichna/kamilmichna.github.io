@@ -24,7 +24,7 @@ export default [{
     link: 'https://kamilmichna.github.io/jsbreakout/'
 },
 {
-    name: 'Paint',
-    description: "Simple React based paint",
-    link: 'https://kamilmichna.github.io/paint/'
+    name: 'Sort Visualisator',
+    description: "Simple React app for sorth alghoritms visualisation.",
+    link: 'https://kamilmichna.github.io/sortVisualisation'
 },]

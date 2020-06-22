@@ -35,7 +35,7 @@ const Technology = (props) => {
     },[])
     let projects = [];
     projects = projectComponents.map((el)=>{
-        return(<ProjectCard target='_blank' href={el.link} className='project__card'>
+        return(<ProjectCard target='_blank' href={el.link} rel="noopener" className='project__card'>
             <h4 className='card__title'>{el.name}</h4>
             <p className='card__description'>{el.description}</p>
         </ProjectCard>)
@@ -47,7 +47,7 @@ const Technology = (props) => {
            <ProjectsContainer>
                {projects}
            </ProjectsContainer>
-           <GithubLink href='https://github.com/kamilmichna?tab=repositories' target='_blank'>See more on GitHub</GithubLink>
+           <GithubLink href='https://github.com/kamilmichna?tab=repositories' rel="noopener" target='_blank'>See more on GitHub</GithubLink>
        </ProjectsSection>
    )
 }

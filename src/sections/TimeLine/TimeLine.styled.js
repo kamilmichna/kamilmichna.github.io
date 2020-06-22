@@ -51,7 +51,7 @@ export const Time = styled.p`
 //     writing-mode: vertical-rl;
 //     justify-content: flex-end;
 // `
-export const CardsContainer = styled.ul`
+export const CardsContainer = styled.div`
     position: absolute;
     width: auto;
     grid-row: 1/7;

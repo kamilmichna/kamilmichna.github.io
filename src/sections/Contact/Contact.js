@@ -25,8 +25,8 @@ const Contact = (props) => {
         <ContactSection>
             <ContactHeader ref={contactHeader}>Contact me</ContactHeader>
             <ContactForm ref={contactForm} action='https://formspree.io/xayyagnn' method="POST">
-                <input className='reply_to'  type="email" name="_replyto" placeholder="Your email" required/>
-                <textarea placeholder="Your message" name="content" required>
+                <input id='_replyto' className='reply_to'  type="email" name="_replyto" placeholder="Your email" required/>
+                <textarea id='content' placeholder="Your message" name="content" required>
                 </textarea>
                 <input type='submit' className='send_mail' value='Send email'/>
             </ContactForm>
