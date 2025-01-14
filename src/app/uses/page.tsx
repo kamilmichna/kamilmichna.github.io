@@ -35,11 +35,11 @@ function Tool({
 }
 
 export const metadata = {
-  title: 'Uses',
+  title: 'Recommendations',
   description: 'Software I use, gadgets I love, and other things I recommend.',
 }
 
-export default function Uses() {
+export default function Recommendations() {
   return (
     <SimpleLayout
       title="Awesome tools that needs to be recommended"

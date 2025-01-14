@@ -124,8 +124,8 @@ function MobileNavigation(
             <MobileNavItem href="/about">About</MobileNavItem>
             <MobileNavItem href="/articles">Articles</MobileNavItem>
             <MobileNavItem href="/projects">Projects</MobileNavItem>
-            <MobileNavItem href="/speaking">AI</MobileNavItem>
-            <MobileNavItem href="/uses">Uses</MobileNavItem>
+            <MobileNavItem href="/certificates">Certificates</MobileNavItem>
+            <MobileNavItem href="/uses">Recommendations</MobileNavItem>
           </ul>
         </nav>
       </PopoverPanel>
@@ -169,8 +169,8 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
         <NavItem href="/about">About</NavItem>
         <NavItem href="/articles">Articles</NavItem>
         <NavItem href="/projects">Projects</NavItem>
-        <NavItem href="/speaking">AI</NavItem>
-        <NavItem href="/uses">Uses</NavItem>
+        <NavItem href="/certificates">Certificates</NavItem>
+        <NavItem href="/uses">Recommendations</NavItem>
       </ul>
     </nav>
   )
@@ -383,7 +383,7 @@ export function Header() {
                     'var(--header-inner-position)' as React.CSSProperties['position'],
                 }}
               >
-                <div className="relative">
+                {/* <div className="relative">
                   <AvatarContainer
                     className="absolute left-0 top-3 origin-left transition-opacity"
                     style={{
@@ -396,7 +396,7 @@ export function Header() {
                     className="block h-16 w-16 origin-left"
                     style={{ transform: 'var(--avatar-image-transform)' }}
                   />
-                </div>
+                </div> */}
               </div>
             </Container>
           </>
